@@ -1,0 +1,244 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS</title>
+</head>
+<body>
+    
+
+    <h3>Assignment</h3>
+    <h4>1. Basic Array Creation Create an array called fruits that contains "apple", "banana", and "mango". Then print the second item.</h4>
+
+    <div id="tab"></div>
+
+    <h4>2. Add and Remove Elements
+
+Start with this array:
+
+let numbers = [1, 2, 3, 4];
+
+
+Add 5 to the end of the array.
+
+Remove the first element.
+
+Print the final array.</h4>
+
+<div id="num"></div>
+
+<h4>3. Loop Through an Array
+
+Given:
+
+let colors = ["red", "green", "blue"];
+
+
+Use a for loop to print each color in uppercase.</h4>
+
+<div id="color"></div>
+
+<h4>5. Filter Even Numbers
+
+Given:
+
+let nums = [1, 2, 3, 4, 5, 6];
+
+
+Create a new array that contains only the even numbers.</h4>
+<div id="sum"></div>
+
+<h4>7. Combine Arrays
+
+Combine these two arrays into one:
+
+let a = [1, 2];
+let b = [3, 4];
+
+
+Expected result: [1, 2, 3, 4]//</h4>
+
+<div id="array"></div>
+ 
+    <script>
+       
+const fruits= ["apple", "Ans: banana", "mango"]
+document.getElementById('tab').innerHTML=fruits[1]
+
+let numbers = [1, 2, 3, 4]
+
+numbers.push(5)
+numbers.shift();
+document.getElementById('num').innerHTML= numbers; 
+
+
+let colors =["red", "green", "blue"]
+let html ="";
+for(let i=0; i <colors.length; i++){
+    html += colors[i].toUpperCase() + "<br>";
+}
+document.getElementById('color').innerHTML= html;
+
+let num =[1, 2, 3, 4, 5, 6]
+let evenNum =[];
+for(let i=0; i < colors.length5; i++){
+    if(num[i] % 2 === 0){
+        evenNum.push(nums[i]);
+    }
+}
+document.getElementById('sum').innerHTML="Even Numbers:"+ evenNum;
+
+
+let a=[1,2];
+let b=[3,4];
+let combined = a.concat (b);
+document.getElementById('array').innerHTML= "Combined Array: " + combined;
+
+
+//Beginner Level (Functions Basics)
+
+//Write a function that prints "Hello, World!".
+
+//Write a function that takes a name as a parameter and prints "Hello, <name>".
+
+//Write a function that takes two numbers and returns their sum.
+
+//Write a function to check whether a number is even or odd.
+
+//Write a function that finds the square of a number.
+
+//Write a function that converts Celsius to Fahrenheit.
+
+//🟡 Intermediate Level
+
+//Write a function that finds the largest of three numbers.
+
+//Write a function that checks if a string is a palindrome.
+
+//Write a function that counts the number of vowels in a string.
+
+//Write a function that returns the factorial of a number.
+
+//Write a function that returns the reverse of a string.
+
+//Write a function that checks whether a number is prime.
+
+//Write a function that calculates the sum of all numbers in an array.
+
+//Write a function that removes duplicate elements from an array.//
+   
+   
+  function hello(){
+    console.log("Hello,World!")
+  }
+  hello()
+  
+  function name(){
+    console.log("Hello,<name>")
+  }
+  name()
+  
+  function sum(a,b){
+    console.log(a + b)
+  }
+  sum(20,59)
+
+ function Even(number) {
+  if (number % 2 === 0) {
+    return number + " is Even";
+  } 
+  else {
+    return number + " is Odd";
+  }
+}
+console.log(Even(2))
+
+   function square(number){
+    console.log(number * number)
+   }
+   square(7)
+
+
+function celsiusToFahrenheit(celsius) {
+  const fahrenheit = celsius * 9/5 + 32;
+  return fahrenheit;
+}
+console.log(celsiusToFahrenheit(30));   
+
+
+function fun(num1, num2, num3){
+    if(num1>num2 && num1>num3){
+        console.log("num1 is largest than num2 or num3")
+    }
+    else if(num2>num1 && num2>num3){
+        console.log("num2 is the largest than num1 or num3")
+    }
+    else{
+        console.log("num3 is largest than num1 or num2")
+    }
+}
+fun(55,78,9)
+
+
+function countVowels(str) {
+  const matches = str.match(/[aeiou]/gi);
+  return matches ? matches.length : 0;
+}
+const sentence1 = "The quick brown fox jumps over the lazy dog";
+const sentence2 = "JavaScript is awesome!";
+const sentence3 = "Ayesha siddiqua"; 
+console.log(`"${sentence1}" has ${countVowels(sentence1)} vowels.`);
+
+console.log(`"${sentence2}" has ${countVowels(sentence2)} vowels.`);
+
+console.log(`"${sentence3}" has ${countVowels(sentence3)} vowels.`);
+
+
+function factorial(n) {
+  if (n === 0 || n === 1) {
+    return 1;
+  }
+  else {
+    return n * factorial(n - 1);
+  }
+}
+const num1 = 6;
+console.log(`The factorial of ${num1} is:`, factorial(num1)); 
+
+
+function reverse(str) {
+  const arr = str.split('');
+  arr.reverse();
+  const reversedStr = arr.join('');
+  return reversedStr;
+}
+console.log(reverse("hello"));
+
+
+function sumArrayForLoop(numbers) {
+  let sum = 0;
+  for (let i = 0; i < numbers.length; i++) {
+    sum += numbers[i]; 
+  }
+
+  return sum;
+}
+const numbersArrayFor = [10, 20, 30, 40];
+console.log(sumArrayForLoop(numbersArrayFor)); 
+
+
+function removeDuplicates(arr) {
+  return [...new Set(arr)];
+}
+const originalArray = [1, 2, 2, 3, 4, 4, 5];
+console.log(removeDuplicates(originalArray)); 
+
+const stringArray = ['apple', 'banana', 'apple', 'orange'];
+console.log(removeDuplicates(stringArray)); 
+
+
+   </script>
+</body>
+</html>
